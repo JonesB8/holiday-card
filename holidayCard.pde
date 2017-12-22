@@ -5,6 +5,8 @@
     int r = 171;
     int g = 252;
     int B = 255;
+    
+  
 void setup()
 {
   size(900,400);
@@ -16,8 +18,8 @@ void draw()
   
  if (c.rgbDirection()==1)
   c.incrementRgbDown();
- if (c.rgbDirection()==2)
-  c.incrementRgbUp();
+ //if (c.rgbDirection()==2)
+  //c.incrementRgbUp();
     background(r,g,B);
  
   fill(255,255,255);
@@ -26,6 +28,7 @@ void draw()
   b.drawSnowman();
   a.drawSnow();
    d.setup();
-   d.pointSun();
+   d.pointSun(845);
    d.drawSun();
+   
 }
