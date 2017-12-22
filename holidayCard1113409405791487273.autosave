@@ -1,13 +1,10 @@
  snow a = new snow();
  snowman b = new snowman();
- rgb c = new rgb();
- daynightcycle d = new daynightcycle();
- merryChristmas e = new merryChristmas();
+  rgb c = new rgb();
+  daynightcycle d = new daynightcycle();
     int r = 171;
     int g = 252;
     int B = 255;
-    
-  
 void setup()
 {
   size(900,400);
@@ -19,8 +16,8 @@ void draw()
   
  if (c.rgbDirection()==1)
   c.incrementRgbDown();
- //if (c.rgbDirection()==2)
-  //c.incrementRgbUp();
+ if (c.rgbDirection()==2)
+  c.incrementRgbUp();
     background(r,g,B);
  
   fill(255,255,255);
@@ -29,8 +26,7 @@ void draw()
   b.drawSnowman();
   a.drawSnow();
    d.setup();
-   d.pointSun(845);
+   d.pointSun();
    d.drawSun();
-  e.drawSign();
-  e.drawLights();
+
 }
