@@ -1,0 +1,31 @@
+ snow a = new snow();
+ snowman b = new snowman();
+  rgb c = new rgb();
+  daynightcycle d = new daynightcycle();
+    int r = 171;
+    int g = 252;
+    int B = 255;
+void setup()
+{
+  size(900,400);
+}
+
+void draw()
+{
+ 
+  
+ if (c.rgbDirection()==1)
+  c.incrementRgbDown();
+ if (c.rgbDirection()==2)
+  c.incrementRgbUp();
+    background(r,g,B);
+ 
+  fill(255,255,255);
+   noStroke();
+   rect(0,350,1200,1200);
+  b.drawSnowman();
+  a.drawSnow();
+   d.setup();
+   d.pointSun();
+   d.drawSun();
+}
