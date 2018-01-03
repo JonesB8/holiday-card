@@ -1,6 +1,23 @@
 public class rgb
 {
   private int state;
+  public void mouseRgb()
+  {
+   if (mouseX<0)
+    r = 171;
+    else
+    r = 171 - .3*(mouseX);
+                      
+   if (mouseX<0)
+    g = 252;
+    else
+    g = 252 - .3*(mouseX);
+    
+   //if ((255 - .1*(mouseX))<255) 
+    B = 255 - .3*(mouseX); 
+   
+  }
+  
   public void incrementRgbDown()
   {
      r--;

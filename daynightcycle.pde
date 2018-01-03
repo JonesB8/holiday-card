@@ -9,7 +9,7 @@ public class daynightcycle
   private float exponent = 4;   // Determines the curve
   private float x = 0.0;        // Current x-coordinate
   private float y = 0.0;        // Current y-coordinate
-  private float step = 0.01;    // Size of each step along the path
+  private float step = 0.05;    // Size of each step along the path
   private float pct = 0.0;      // Percentage traveled (0.0 to 1.0)
   private int stateSun;
   private int g2 = 244;
@@ -40,10 +40,10 @@ void setup() {
               x = beginX + (pct * distX);
               y = beginY + (pow(pct, exponent) * distY);
              
-                g2++;
-                b2++;
+               // g2++;
+               // b2++;
             }
-        fill(255,g2,b2);
+        fill(255,g2+(.2*mouseX),b2+(.2*mouseX));
         ellipse(x,y,100,100);
       }
   
@@ -53,7 +53,7 @@ void setup() {
         pct = 0.0;
         beginX = x;
         beginY = 55;
-        endX = enter;
+        endX = mouseX;
         endY = 200;
         distX = endX - beginX;
         distY = endY - beginY;

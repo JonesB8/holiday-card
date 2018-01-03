@@ -3,9 +3,10 @@
  rgb c = new rgb();
  daynightcycle d = new daynightcycle();
  merryChristmas e = new merryChristmas();
-    int r = 171;
-    int g = 252;
-    int B = 255;
+    float r = 171;
+    float g = 252;
+    float B = 255;
+
     
   
 void setup()
@@ -17,8 +18,8 @@ void draw()
 {
  
   
- if (c.rgbDirection()==1)
-  c.incrementRgbDown();
+ //if (c.rgbDirection()==1)
+  c.mouseRgb();
  //if (c.rgbDirection()==2)
   //c.incrementRgbUp();
     background(r,g,B);
@@ -32,5 +33,5 @@ void draw()
    d.pointSun(845);
    d.drawSun();
   e.drawSign();
-  e.drawLights();
+
 }
